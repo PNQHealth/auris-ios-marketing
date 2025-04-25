@@ -31,7 +31,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Upload artifact
         run: |
-          # Create the artifact that will be deployed
+          mkdir -p $RUNNER_TEMP
           tar \
             --dereference --hard-dereference \
             --directory . \
@@ -39,6 +39,12 @@ jobs:
             --exclude=.git \
             --exclude=.github \
             .
+      - name: Debug Artifact
+        run: |
+          ls -lah $RUNNER_TEMP
+          if [ ! -f "$RUNNER_TEMP/artifact.tar" ]; then
+            echo "Artifact not found"; exit 1;
+          fi
       - name: Upload Pages artifact
         uses: actions/upload-artifact@v3
         with:
