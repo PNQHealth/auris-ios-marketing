@@ -29,21 +29,5 @@ jobs:
           retention-days: 1
           if-no-files-found: error
 
-      - name: Debug Artifact
-        run: |
-          ls -lah $RUNNER_TEMP
-          if [ ! -f "$RUNNER_TEMP/artifact.tar" ]; then
-            echo "Artifact not found"; exit 1;
-          fi
-
-      - name: Upload Pages artifact
-        if: success()  # Ensure the previous steps succeed
-        uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: $RUNNER_TEMP/artifact.tar  # Ensure this path is valid
-          retention-days: 1
-          if-no-files-found: error
-
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
