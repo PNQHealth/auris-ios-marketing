@@ -1,0 +1,18 @@
+title: Auris - Advanced Tinnitus Therapy
+description: Personalized tinnitus therapy and hearing health management for iOS
+baseurl: ""
+url: ""
+
+# GitHub Pages settings
+markdown: kramdown
+permalink: pretty
+
+# Enable GitHub Pages features
+github: [metadata]
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
