@@ -1,34 +1,25 @@
-name: GitHub Pages
+name: Deploy GitHub Pages
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
       - name: Upload artifact
         run: |
           mkdir -p $RUNNER_TEMP
@@ -45,15 +36,14 @@ jobs:
           if [ ! -f "$RUNNER_TEMP/artifact.tar" ]; then
             echo "Artifact not found"; exit 1;
           fi
-      - name: Debug Information
-        run: env
+
       - name: Upload Pages artifact
-        uses: actions/upload-artifact@b8130d9ab958b325bbde9786d62f2c97a9885a0e
+        uses: actions/upload-artifact@v3
         with:
           name: github-pages
           path: ${{ runner.temp }}/artifact.tar
           retention-days: 1
           if-no-files-found: error
+
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
