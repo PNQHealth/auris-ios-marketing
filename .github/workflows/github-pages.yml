@@ -20,16 +20,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        run: |
-          mkdir -p $RUNNER_TEMP
-          tar \
-            --dereference --hard-dereference \
-            --directory . \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
-            --exclude=.git \
-            --exclude=.github \
-            .
+      - name: Upload Pages artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: .  # Upload everything in the repository
+          retention-days: 1
+          if-no-files-found: error
 
       - name: Debug Artifact
         run: |
