@@ -1,138 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sem</title>
-    <link rel="icon" href="assets/images/pnq-favicon.gif" type="image/gif">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auris iOS - PnQ Health</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body {
+      background: #1d3557; /* Solid background color */
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding-top: 40px; /* Add some top padding since we removed the header */
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+    
+    .app-showcase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px 20px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (min-width: 768px) {
+      .app-showcase {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        padding: 60px 40px;
+      }
+    }
+    
+    .app-screenshot {
+      max-width: 300px;
+      border-radius: 30px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+    
+    .app-info {
+      max-width: 500px;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .app-info {
+        text-align: left;
+      }
+    }
+    
+    .app-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .app-subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      color: #a8dadc;
+    }
+    
+    .app-description {
+      font-size: 1.125rem;
+      color: #f1faee;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    
+    .features {
+      margin-bottom: 24px;
+    }
+    
+    .features ul {
+      list-style-type: none;
+    }
+    
+    .features li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 28px;
+      color: #f1faee;
+    }
+    
+    .features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00b4d8;
+      font-weight: bold;
+    }
+    
+    .download-container {
+      display: flex;
+      justify-content: center; /* Center the download button */
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    @media (min-width: 768px) {
+      .download-container {
+        justify-content: flex-start; /* Align left on desktop to match the image */
+      }
+    }
+    
+    .download-button {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    
+    .download-button:hover {
+      transform: scale(1.05);
+    }
+    
+    .download-button img {
+      height: 50px;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #a8dadc;
+      font-size: 0.875rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-links a {
+      color: #a8dadc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    
+    .footer-divider {
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 15px 0;
+    }
+  </style>
 </head>
-
-<body style="overscroll-behavior-x: auto;">
-    <div class="pnq-banner">
-        <div class="pnq-banner-logo">
-            <img src="assets/images/favicon.png" alt="pnq logo">
+<body>
+  <!-- Header section removed as requested -->
+  
+  <div class="container">
+    <div class="app-showcase">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SCR-20250425-mubx-portrait-iqqieVlnmScasrzCJTeKhKrU7ZsIhn.png" alt="Auris iOS App Interface" class="app-screenshot">
+      
+      <div class="app-info">
+        <h1 class="app-title">Auris</h1>
+        <h2 class="app-subtitle">Precision Tone Therapy</h2>
+        <p class="app-description">
+          Clinically prescribed sound therapy delivered through a secure, HIPAA-compliant platform for personalized hearing treatment plans.
+        </p>
+        
+        <div class="features">
+          <ul>
+            <li>Personalized treatment protocols prescribed by healthcare providers</li>
+            <li>Precision frequency calibration for each ear</li>
+            <li>Simple three-step treatment process</li>
+            <li>Secure, HIPAA-compliant data transfer</li>
+            <li>Track progress and share results with your provider</li>
+          </ul>
         </div>
-        <span class="pnq-banner-title">Peace N Quiet</span>
-        <div class="pnq-banner-buttons">
-            <button class="pnq-banner-btn">Open</button>
-            <button class="pnq-banner-btn">Send Feedback</button>
+        
+        <div class="download-container">
+          <a href="https://apps.apple.com/app/auris-ios" class="download-button" target="_blank" rel="noopener noreferrer">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/App%20Store%20Download%20Sem-LZE7eKe5ZwQrzho3wSyPq1hEJyoZdz.png" alt="Download on the App Store">
+          </a>
         </div>
+      </div>
     </div>
-    <section id="header">
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                <a href="./" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                    <img id="app-logo" src="assets/images/favicon.svg" alt="app logo" style="height: 48px; margin-right: 12px;">
-                    <span class="fs-4">Sem</span>
-                </a>
-            </header>
-        </div>
-    </section>
-
-    <section>
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-                        <img id="app-logo-2" src="assets/images/favicon.svg" alt="app logo" style="height: 40px; margin-right: 8px;">
-                        Sem
-                    </h1>
-                    <p class="lead">Track expenses, get expense reminders, and manage your monthly budget with ease.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.layeredco.sem">
-                            <img src="assets/images/Play Store Download.png" alt="Google Play Store Download Image" style="height: 48px;">
-                        </a>
-                        <a href="https://apps.apple.com/us/app/sem/id6455884315">
-                            <img src="assets/images/App Store Download Sem.png" alt="Apple App Store Download Image" style="height: 48px;">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-10 col-sm-8 col-lg-6">
-                    <img src="assets/images/SCR-20250425-mubx-portrait.png" class="d-block mx-lg-auto img-fluid" alt="App Preview">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="icon-grid">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Money Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Track Expenses Easily</h3>
-                        <p>Manage all your expenses with just a few taps. Quickly add, edit, and categorize your spending.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Overview Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Monthly Budget Overview</h3>
-                        <p>Visualize your spending across the month with an intuitive budget summary that helps you stay on track.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Notifications Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Push Notifications for Bills</h3>
-                        <p>Get timely reminders for upcoming bills so you never miss a payment.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Statements Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Generate Statements Automatically</h3>
-                        <p>Receive detailed monthly statements to review your financial activity at the start of each month.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Theme Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Dark & Light Mode Support</h3>
-                        <p>Choose between a sleek dark mode or a bright light mode to match your preference.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Touch Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Multi-Select & Swipe Actions</h3>
-                        <p>Easily manage multiple expenses at once with multi-select and swipe gestures.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Category Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Customizable Categories</h3>
-                        <p>Organize your expenses by creating custom categories to suit your budgeting needs.</p>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <img class="feature-icon" src="assets/images/favicon.svg" alt="Favorite Icon" style="height: 32px; margin-right: 12px;">
-                    <div>
-                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Simple, User-Friendly Design</h3>
-                        <p>Enjoy a clean, intuitive interface designed for everyday users like you.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="footer">
-        <div class="container">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="./pages/privacy_policy.html" class="nav-link px-2 text-body-secondary">Privacy Policy</a></li>
-                    <li class="nav-item"><a href="./pages/terms_of_service.html" class="nav-link px-2 text-body-secondary">Terms of Use</a></li>
-                    <li class="nav-item"><a href="mailto:mendoza.mark007@gmail.com?subject=[Feedback]Lets Get In Touch" class="nav-link px-2 text-body-secondary">Feedback</a></li>
-                    <li class="nav-item"><a href="mailto:mendoza.mark007@gmail.com?subject=[Suggestion]Here is an idea!" class="nav-link px-2 text-body-secondary">Suggestion</a></li>
-                </ul>
-                <p class="text-center text-body-secondary"> 2025 Company, Inc</p>
-            </footer>
-        </div>
-    </section>
-
+    
+    <!-- Treatment Process Section removed as requested -->
+    
+    <div class="footer">
+      <div class="footer-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/suggestion">Suggestion</a>
+      </div>
+      <div class="footer-divider"></div>
+      <p>&copy; 2024 PnQ Health. All rights reserved.</p>
+    </div>
+  </div>
 </body>
 </html>

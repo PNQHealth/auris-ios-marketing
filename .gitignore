@@ -35,3 +35,37 @@ _site/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Vercel specific
+.vercel
+.next/
+out/
+build/
+dist/
+.turbo
+
+# Testing
+coverage/
+
+# Debug
+.pnpm-debug.log*
+
+# Misc
+*.pem
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Optional eslint cache
+.eslintcache
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Diverse LCLI
+.lcli/
+lcli-cache/
+lcli.log
+.lcli-config.json
+.lcli-output/
