@@ -1,3 +1,7 @@
+# NOTE: This subdirectory .gitignore is maintained for compatibility.
+# The comprehensive unified .gitignore is located at the repository root:
+# /Users/admin/Documents/PnQ/.gitignore
+
 # macOS system files
 .DS_Store
 .AppleDouble
